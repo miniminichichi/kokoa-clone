@@ -79,3 +79,54 @@
 .message-row--own .message__info {
   flex-direction: row-reverse;
 }
+.채팅입력 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.채팅입력 .채팅입력__column:first-child {
+  width: 10%;
+}
+.채팅입력 .채팅입력__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.채팅입력 i {
+  opacity: 0.5;
+}
+.채팅입력 input {
+  padding: 12px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+.채팅입력__column:last-child > i,
+.채팅입력__column:last-child button {
+  position: absolute;
+  right: -3px;
+  top: 2px;
+}
+.채팅입력__column:last-child > i {
+  right: 40px;
+  top: 10px;
+}
+.채팅입력__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.채팅입력__column button i {
+  opacity: 1;
+}
+.채팅입력__column button :focus,
+.채팅입력__column button:active {
+  outline: none;
+}
