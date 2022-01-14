@@ -1,11 +1,11 @@
 #chat-screen {
   background-color: #abc1d1;
-  height: 11000vh;
+  height: 500vh;
 }
 #chat-screen .alt-header,
 #chat-screen .status-bar {
   top: 0;
-  position: sticky;
+  position: fixed;
   width: 100%;
   background-color: #abc1d1;
   box-sizing: border-box;
@@ -17,11 +17,23 @@
   top: 10px;
   z-index: 1;
 }
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
 .main-chat {
-  margin-top: 5px;
+  margin-top: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 .chat__timestamp {
   color: white;
@@ -35,6 +47,7 @@
 .message-row {
   width: 100%;
   display: flex;
+  margin-bottom: 25px;
 }
 
 .message-row img {
@@ -42,7 +55,6 @@
   height: 50px;
   border-radius: 40%;
   margin-right: 10px;
-  margin-bottom: 25px;
 }
 .message__author {
   margin-bottom: 5px;
@@ -89,6 +101,7 @@
   padding: 5px 25px;
   box-sizing: border-box;
   align-items: center;
+  transition: all 0.3s ease-in-out;
 }
 .채팅입력 .채팅입력__column:first-child {
   width: 10%;
@@ -105,16 +118,19 @@
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 .채팅입력__column:last-child > i,
 .채팅입력__column:last-child button {
   position: absolute;
-  right: -3px;
-  top: 2px;
+  right: -20px;
+  top: 4.5px;
+  /* 입력키 화살표 */
 }
 .채팅입력__column:last-child > i {
-  right: 40px;
-  top: 10px;
+  right: 20px;
+  top: 11px;
+  /* 이모티콘 */
 }
 .채팅입력__column button {
   background-color: var(--yellow);
@@ -129,4 +145,21 @@
 .채팅입력__column button :focus,
 .채팅입력__column button:active {
   outline: none;
+}
+.채팅입력 .채팅입력__column:first-child,
+.채팅입력 .fa-smile,
+.채팅입력 button {
+  transition: opacity 0.3s ease-in-out;
+}
+.채팅입력:focus-within .채팅입력__column:first-child,
+.채팅입력:focus-within .fa-smile,
+.채팅입력:focus-within button {
+  opacity: 0;
+}
+.채팅입력:focus-within input {
+  width: 90vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+.채팅입력:focus-within {
+  transform: translateY(80px);
 }
