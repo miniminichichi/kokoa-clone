@@ -22,11 +22,24 @@
   padding-top: 15px;
 }
 .friends-screen__channel-header {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
 }
+.friends-screen__friends {
+  margin-top: 25px;
+  border-top: var(--main-border);
+  padding-top: 15px;
+}
+.friends-screen__friends-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 @keyframes hideSplashScreen {
   from {
     opacity: 1;

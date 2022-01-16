@@ -1,9 +1,10 @@
 .screen-header {
+  background-color: var(--skyblue);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--horizontal-space);
-  margin-top: 15px;
+
   margin-bottom: 15px;
 }
 .screen-header__title {
