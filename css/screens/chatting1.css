@@ -1,5 +1,5 @@
 #chat-screen {
-  background-color: #abc1d1;
+  background-color: blanchedalmond;
   height: 500vh;
 }
 #chat-screen .alt-header,
@@ -7,7 +7,7 @@
   top: 0;
   position: fixed;
   width: 100%;
-  background-color: #abc1d1;
+  background-color: var(--orange);
   box-sizing: border-box;
 }
 #chat-screen .status-bar {
@@ -74,15 +74,17 @@
 }
 .message__time,
 .message__author {
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 14px;
+  color: black;
 }
 
 .message-row--own {
   justify-content: flex-end;
+  color: white;
 }
 .message-row--own .message__bubble {
-  background-color: var(--yellow);
+  background-color: #003049;
   border-top-right-radius: 0px;
   border-top-left-radius: 15px;
   margin-right: 0px;
@@ -95,13 +97,13 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: white;
+  background-color: #fcbf49;
   display: flex;
   justify-content: space-between;
   padding: 5px 25px;
   box-sizing: border-box;
+  /* padding이 element를 안보이게 해서 box-sizing */
   align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 .채팅입력 .채팅입력__column:first-child {
   width: 10%;
@@ -114,23 +116,22 @@
   opacity: 0.5;
 }
 .채팅입력 input {
-  padding: 12px;
+  padding: 5px;
+  height: 30px;
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
-  transition: all 0.3s ease-in-out;
 }
 .채팅입력__column:last-child > i,
 .채팅입력__column:last-child button {
   position: absolute;
-  right: -20px;
+  right: -5px;
   top: 4.5px;
-  /* 입력키 화살표 */
+  /* 전송버튼 크기 */
 }
 .채팅입력__column:last-child > i {
-  right: 20px;
-  top: 11px;
-  /* 이모티콘 */
+  right: 34px;
+  top: 12px;
 }
 .채팅입력__column button {
   background-color: var(--yellow);
@@ -142,7 +143,7 @@
 .채팅입력__column button i {
   opacity: 1;
 }
-.채팅입력__column button :focus,
+.채팅입력__column button:focus,
 .채팅입력__column button:active {
   outline: none;
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Itim&family=Lilita+One&family=Open+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
 @import "reset.css";
 @import "variables.css";
 /* Compoenets */
@@ -17,10 +17,11 @@
 @import "screens/find.css";
 @import "screens/more.css";
 @import "screens/settings.css";
-@import "screens/chat.css";
+@import "screens/chatting1.css";
 body {
-  color: #2e363e;
-  font-family: "Itim", cursive;
+  color: #14213d;
+  background-color: blanchedalmond;
+  font-family: "Concert One", cursive;
 }
 .main-screen {
   padding: 0px var(--horizontal-space);
