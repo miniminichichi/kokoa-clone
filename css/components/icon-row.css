@@ -14,10 +14,16 @@
   margin-top: 13px;
 }
 .icon-row__icon i {
-  font-size: 35px;
+  font-size: 30px;
 }
-
+.icon-text {
+  margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+}
 .icon-row__icon span {
   text-align: center;
-  margin-top: 18px;
 }
