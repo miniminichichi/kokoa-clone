@@ -1,36 +1,56 @@
-.more-screen .icon-row {
-  margin-top: 35px;
+.main-screen {
+  padding-bottom: 90px;
 }
-.more-suggestions {
-  margin-top: 50px;
+.covid {
   border-top: var(--main-border);
-  padding-top: 40px;
-}
 
-.more-suggestions__title {
-  margin-bottom: 30px;
-}
-
-.more-suggestions__icons {
-  display: flex;
-}
-.more-suggestions__icon {
-  margin-right: 30px;
+  margin-top: 20px;
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.more-suggestions__icon-image {
-  width: 60px;
-  height: 60px;
-  background-color: var(--yellow);
+.covid__korea {
+  background-color: #fcbf49;
   border-radius: 10px;
+  padding: 8px;
+  font-size: 20px;
+}
+.covid__Weekly_Trend__title {
+  display: block;
+}
+.covid__Weekly_Trend .covid__Weekly_Trend__visual img {
+  width: 100%;
+  margin-top: 10px;
+  border: 3px solid #fcbf49;
+  border-radius: 10px;
+  animation: fadein 4s;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
 }
-.more-suggestions__icon-image i {
-  font-size: 32;
-  color: white;
+@keyframes heartBeat {
+  0% {
+    color: #003049;
+    transform: none;
+  }
+  50% {
+    color: #003049;
+    transform: scale(1.1);
+  }
+  100% {
+    color: #003049;
+    transform: none;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.covid__korea {
+  animation: heartBeat 1.3s linear infinite;
 }

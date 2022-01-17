@@ -1,0 +1,166 @@
+#chat-screen {
+  background-color: blanchedalmond;
+  height: 500vh;
+}
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background-color: var(--orange);
+  box-sizing: border-box;
+}
+#chat-screen .status-bar {
+  z-index: 2;
+}
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.main-chat {
+  margin-top: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.8s linear;
+}
+.chat__timestamp {
+  color: white;
+  background-color: #92a4b2;
+  padding: 15px;
+  border-radius: 25px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.message-row img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+.message__author {
+  margin-bottom: 5px;
+  display: block;
+}
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+.message__bubble {
+  background-color: white;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+}
+.message__time,
+.message__author {
+  opacity: 0.7;
+  font-size: 14px;
+  color: black;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+  color: white;
+}
+.message-row--own .message__bubble {
+  background-color: #003049;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 15px;
+  margin-right: 0px;
+  margin-left: 5px;
+}
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+.채팅입력 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fcbf49;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  /* padding이 element를 안보이게 해서 box-sizing */
+  align-items: center;
+}
+.채팅입력 .채팅입력__column:first-child {
+  width: 10%;
+}
+.채팅입력 .채팅입력__column:last-child {
+  width: 90%;
+  position: relative;
+}
+.채팅입력 i {
+  opacity: 0.5;
+}
+.채팅입력 input {
+  padding: 5px;
+  height: 30px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+.채팅입력__column:last-child > i,
+.채팅입력__column:last-child button {
+  position: absolute;
+  right: -5px;
+  top: 4.5px;
+  /* 전송버튼 크기 */
+}
+.채팅입력__column:last-child > i {
+  right: 34px;
+  top: 12px;
+}
+.채팅입력__column button {
+  background-color: var(--yellow);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.채팅입력__column button i {
+  opacity: 1;
+}
+.채팅입력__column button:focus,
+.채팅입력__column button:active {
+  outline: none;
+}
+.채팅입력 .채팅입력__column:first-child,
+.채팅입력 .fa-smile,
+.채팅입력 button {
+  transition: opacity 0.3s ease-in-out;
+}
+.채팅입력:focus-within .채팅입력__column:first-child,
+.채팅입력:focus-within .fa-smile,
+.채팅입력:focus-within button {
+  opacity: 0;
+}
+.채팅입력:focus-within input {
+  width: 90vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+.채팅입력:focus-within {
+  transform: translateY(80px);
+}

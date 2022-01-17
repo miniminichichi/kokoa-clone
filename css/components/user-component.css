@@ -3,9 +3,10 @@
 }
 .user-component,
 .user-component__column:first-child {
+  margin-top: 10px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 .user-component__avatar {
   width: 70px;

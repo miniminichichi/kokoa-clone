@@ -1,19 +1,23 @@
 .icon-row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 25px;
+  padding-bottom: 10px 0px;
 }
 
-.icon-row__icon {
+.icon-row .icon-row__icon {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 40%;
 }
-
+.icon-row:last-child {
+  margin-top: 13px;
+}
 .icon-row__icon i {
   font-size: 35px;
 }
 
 .icon-row__icon span {
+  text-align: center;
   margin-top: 18px;
 }
